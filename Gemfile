@@ -29,9 +29,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'simple_form'
 gem 'bootstrap-sass'
-gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
+gem "actiontext", require: "action_text"
+gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
