@@ -55,7 +55,7 @@ before_action :find_post, only: [:edit, :update, :show, :delete]
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :main_image, other_images: [])
   end
 
   def find_post
