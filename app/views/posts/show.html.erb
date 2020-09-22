@@ -1,14 +1,14 @@
 <div class="col-sm-11 col-xs-12 blog-content">
-  <h2 class="text-center"><%= @post.title %></h2>
-  <h5 class="text-center"><%= @post.created_at.strftime('%b %d, %Y') %></h5>
-  <p id="notice"><%= notice %></p>
+    <h2 class="text-center"><%= @post.title %></h2>
+    <h5 class="text-center"><%= @post.created_at.strftime('%b %d, %Y') %></h5>
+    <p id="notice"><%= notice %></p>
 
-<% if @post.main_image.attached? %>
-  <div>
-    <%= image_tag @post.main_image.variant(resize: '400x400') %>
-  </div>
-<% end %>
-<div><%= raw @post.body %></div>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+    <% if @post.main_image.attached? %>
+    <div class='main-img'>
+        <%= image_tag @post.main_image.variant(resize: '400x400') %>
+    </div>
+    <% end %>
+    <div><%= raw @post.body %></div>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', posts_path %>
 </div>
