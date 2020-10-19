@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ @import "./actiontext.scss";
+
+ .text-center {
+     text-align: center;
+ }

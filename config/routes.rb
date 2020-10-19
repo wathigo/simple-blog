@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: "posts#index"
+
+  resources :posts
+  match 'blobs/:signed_id/*filename', to: 'blobs#show', via: [:get, :post]
+  delete 'attachments/:signed_id/*filename', to: 'attachments#destroy'
+  resources :attachments, only: [:destroy], as: :destroy_attachment
 end
